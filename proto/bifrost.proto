@@ -1,0 +1,26 @@
+// Copyright 2014 Makepolo Inc. All Rights Reserved.
+// Author: huangyue@makepolo.com (Yue Huang)
+
+package util.bifrost;
+
+enum ErrorCode {
+  SUCCESS = 0;
+  METHOD_NO_EXIST = 1;
+  INVALID_REQUEST = 2;
+}
+
+message Request {
+  required fixed64 id = 1;
+  required bytes data = 2;
+  required string method_name = 3;
+  // no support more services bind a port temporarily
+  // TODO (Moon):
+  // required string service_name = 4;
+}
+
+message Response {
+  required fixed64 id = 1;
+  required bytes data = 2;
+  required ErrorCode error_code = 3;
+  optional string error_info = 4;
+}

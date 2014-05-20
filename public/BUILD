@@ -1,6 +1,3 @@
-# Copyright 2014 Makepolo Inc. All Rights Reserved.
-# Author: huangyue@makepolo.com (Yue Huang)
-
 cc_library(
     name = 'rpc_channel.h',
     deps = [
